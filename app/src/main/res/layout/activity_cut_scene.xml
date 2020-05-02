@@ -8,18 +8,13 @@
     android:id="@+id/cutScene"
     >
 
-    <TextView
-        android:id="@+id/title"
+    <ImageView
+        android:id="@+id/egg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/egg1"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/press_start_2p"
-        android:text="Cutscene"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
-
+        android:layout_centerVertical="true"
         />
 
 </RelativeLayout>
