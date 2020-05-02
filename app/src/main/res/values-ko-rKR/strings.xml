@@ -8,4 +8,8 @@
     <string name="feed">목욕하기</string>
     <string name="bath">식사하기</string>
     <string name="sleep">잠자기</string>
+    <string name="love">사랑</string>
+    <string name="sleepiness">졸음</string>
+    <string name="hunger">배고픔</string>
+    <string name="dirtiness">더러움</string>
 </resources>
