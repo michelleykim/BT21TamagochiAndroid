@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/press_start_2p"
-        android:text="Your BT21"
+        android:text="@string/your_bt21"
         android:textColor="#000000"
         android:textSize="30sp"
         android:layout_alignParentTop="true"
@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="Continue"
+        android:text="@string/cont"
         android:textColor="#000000" />
 
     <Button
@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="New Game"
+        android:text="@string/new_game"
         android:textColor="#000000" />
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/press_start_2p"
-        android:text="Quit"
+        android:text="@string/quit"
         android:textColor="#000000" />
 
 </RelativeLayout>

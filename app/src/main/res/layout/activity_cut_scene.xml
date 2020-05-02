@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameScreen"
-    android:id="@+id/gameScreen"
+    tools:context=".CutScene"
+    android:id="@+id/cutScene"
     >
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/press_start_2p"
-        android:text="Main screen for the game"
+        android:text="Cutscene"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_alignParentTop="true"

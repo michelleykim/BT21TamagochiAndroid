@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button continueButton;
+    private Button newGameButton;
+    private Button quitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +24,41 @@ public class MainActivity extends AppCompatActivity {
                 toGameScreen();
             }
         });
+
+        newGameButton = (Button) findViewById(R.id.newGameButton);
+        newGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toCutScene();
+            }
+        });
+
+        quitButton = (Button) findViewById(R.id.quitButton);
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                quitGame();
+            }
+        });
     }
 
+    // EFFECTS: move to the game screen
     private void toGameScreen() {
         Intent intent = new Intent(this, GameScreen.class);
         startActivity(intent);
     }
 
+    // EFFECTS: move to the cut scene
+    private void toCutScene() {
+        Intent intent = new Intent(this, CutScene.class);
+        startActivity(intent);
+    }
+
+    // EFFECTS: exit application
+    private void quitGame() {
+        // quit the game app
+        finish();
+        System.exit(0);
+    }
 
 }
