@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class GameScreen extends AppCompatActivity {
+    int hunger;
+    int dirtiness;
+    int sleepiness;
     Button feedButton;
     Button bathButton;
     Button sleepButton;
@@ -17,6 +20,9 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.activity_game_screen);
 
         // initiate new game
+        hunger = 60;
+        dirtiness = 60;
+        sleepiness = 60;
         initiateButtons();
     }
 
@@ -48,13 +54,16 @@ public class GameScreen extends AppCompatActivity {
 
     public void feed() {
         // feed bt21, hunger decreases by 5 points
+        hunger = hunger - 5;
     }
 
     public void takeBath() {
         // take bt21 a bath, dirtiness decreases by 5 points
+        dirtiness = dirtiness - 5;
     }
 
     public void goSleep() {
         // bt21 goes sleep, sleepiness decreases by 5 points
+        sleepiness = sleepiness - 5;
     }
 }
