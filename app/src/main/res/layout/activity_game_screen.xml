@@ -9,17 +9,122 @@
     >
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:fontFamily="@font/press_start_2p"
-        android:text="Main screen for the game"
+        android:text="@string/baby_koya"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/love"
         android:textColor="#000000"
         android:textSize="15sp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
-
+        android:layout_below="@id/name"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
         />
+
+    <TextView
+        android:id="@+id/hunger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/hunger"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_above="@id/dirtiness"
+        />
+
+    <TextView
+        android:id="@+id/dirtiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/dirtiness"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_above="@id/sleepiness"
+        />
+
+    <TextView
+        android:id="@+id/sleepiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/sleepiness"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@id/feedButton"
+        />
+
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feed"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <Button
+        android:id="@+id/bathButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bath"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="125dp"
+        android:layout_alignLeft="@id/feedButton"
+        android:layout_marginStart="125dp"
+        android:layout_alignStart="@id/feedButton"
+        />
+
+    <Button
+        android:id="@+id/sleepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleep"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="125dp"
+        android:layout_alignLeft="@id/bathButton"
+        android:layout_marginStart="125dp"
+        android:layout_alignStart="@id/bathButton"
+        />
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_above="@id/sleepiness"
+        app:srcCompat="@drawable/border"
+        />
+
 
 </RelativeLayout>

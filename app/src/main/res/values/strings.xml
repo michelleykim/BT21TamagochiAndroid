@@ -5,4 +5,12 @@
     <string name="cont">Continue</string>
     <string name="new_game">New Game</string>
     <string name="quit">Quit</string>
+    <string name="feed">Feed</string>
+    <string name="bath">Bath</string>
+    <string name="sleep">Sleep</string>
+    <string name="baby_koya" translatable="false">Baby Koya</string>
+    <string name="love">Love:</string>
+    <string name="hunger">Hunger:</string>
+    <string name="dirtiness">Dirtiness:</string>
+    <string name="sleepiness">Sleepiness:</string>
 </resources>
