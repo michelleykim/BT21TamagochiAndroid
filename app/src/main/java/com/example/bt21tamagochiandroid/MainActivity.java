@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
     // EFFECTS: exit application
     private void quitGame() {
-        // quit the game app
         finish();
         System.exit(0);
     }
