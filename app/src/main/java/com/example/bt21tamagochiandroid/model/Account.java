@@ -11,7 +11,7 @@ public class Account {
     }
 
     public void determineTendency() {
-        if (tendency == 1) {
+        if (tendency == 0) {
             koya = new Koya();
         } // else if tendency == 2, then new Mang() etc..
     }
