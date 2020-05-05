@@ -11,7 +11,6 @@ import android.widget.RelativeLayout;
 
 public class CutScene2 extends AppCompatActivity {
     private RelativeLayout rlayout;
-    GameScreen gameScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public class CutScene2 extends AppCompatActivity {
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
         editor.commit();
-        
+
         Intent intent = new Intent(this, GameScreen.class);
         startActivity(intent);
     }
