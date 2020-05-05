@@ -7,25 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-public class Questions1 extends AppCompatActivity {
+public class Questions2 extends AppCompatActivity {
     private RelativeLayout rlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions1);
+        setContentView(R.layout.activity_questions2);
 
-        rlayout = (RelativeLayout) findViewById(R.id.questions1);
+        rlayout = (RelativeLayout) findViewById(R.id.questions2);
         rlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toQuestions2();
+                toQuestions3();
             }
         });
     }
 
-    private void toQuestions2() {
-        Intent intent = new Intent(this, Questions2.class);
+    private void toQuestions3() {
+        Intent intent = new Intent(this, Questions3.class);
         startActivity(intent);
     }
 }

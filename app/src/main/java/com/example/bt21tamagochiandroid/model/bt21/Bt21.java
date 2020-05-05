@@ -1,4 +1,6 @@
-package com.example.bt21tamagochiandroid.model;
+package com.example.bt21tamagochiandroid.model.bt21;
+
+import com.example.bt21tamagochiandroid.model.Satisfaction;
 
 import java.util.ArrayList;
 

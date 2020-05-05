@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questions1"
-    android:id="@+id/questions1"
+    tools:context=".Questions4"
+    android:id="@+id/questions4"
     >
 
     <TextView
-        android:id="@+id/question1"
+        android:id="@+id/question4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/press_start_2p"
-        android:text="Where would you \nplace the egg?"
+        android:text="Might as well say \nsomething nice! \n \nWhat would you \nsay to the egg?"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="150dp"
+
         />
+
 
 </RelativeLayout>

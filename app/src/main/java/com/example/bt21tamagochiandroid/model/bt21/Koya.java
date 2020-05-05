@@ -1,6 +1,4 @@
-package com.example.bt21tamagochiandroid.model;
-
-import java.util.ArrayList;
+package com.example.bt21tamagochiandroid.model.bt21;
 
 public class Koya extends Bt21 {
 

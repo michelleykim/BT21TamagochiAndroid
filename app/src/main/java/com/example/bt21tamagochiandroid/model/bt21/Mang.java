@@ -1,4 +1,4 @@
-package com.example.bt21tamagochiandroid.model;
+package com.example.bt21tamagochiandroid.model.bt21;
 
 public class Mang extends Bt21 {
 

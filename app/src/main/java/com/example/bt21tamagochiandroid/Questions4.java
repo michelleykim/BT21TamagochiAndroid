@@ -7,25 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-public class Questions1 extends AppCompatActivity {
+public class Questions4 extends AppCompatActivity {
     private RelativeLayout rlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions1);
+        setContentView(R.layout.activity_questions4);
 
-        rlayout = (RelativeLayout) findViewById(R.id.questions1);
+        rlayout = (RelativeLayout) findViewById(R.id.questions4);
         rlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toQuestions2();
+                toCutScene();
             }
         });
     }
 
-    private void toQuestions2() {
-        Intent intent = new Intent(this, Questions2.class);
+    private void toCutScene() {
+        Intent intent = new Intent(this, CutScene2.class);
         startActivity(intent);
     }
+
 }

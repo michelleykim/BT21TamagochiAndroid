@@ -35,7 +35,13 @@ public class GameScreen extends AppCompatActivity {
         editor = pref.edit();
 
         account = new Account("someAccount");
+        // if account has the tendency in the file, set account tendency to the saved tendency
+        if (pref.contains("tendency")) {
+            account.setTendency(pref.getInt("tendency", 0));
+        }
         account.determineTendency();
+        // save tendency of the account
+        editor.putInt("tendency", account.getTendency());
         renderBt21Image();
 
         loadPreferences();
