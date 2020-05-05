@@ -40,4 +40,16 @@ public class Satisfaction {
     public int getLove() {
         return love;
     }
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+    public void setSleepiness(int sleepiness) {
+        this.sleepiness = sleepiness;
+    }
+    public void setDirtiness(int dirtiness) {
+        this.dirtiness = dirtiness;
+    }
+    public void setLove(int love) {
+        this.love = love;
+    }
 }

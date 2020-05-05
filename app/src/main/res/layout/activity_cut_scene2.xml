@@ -4,22 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questions1"
-    android:id="@+id/questions1"
+    tools:context=".CutScene2"
+    android:id="@+id/cutScene2"
     >
 
-    <TextView
-        android:id="@+id/question1"
+    <ImageView
+        android:id="@+id/crackedEgg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cracked_egg"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/press_start_2p"
-        android:text="First question would be \nplaced here."
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
-
+        android:layout_centerVertical="true"
         />
 
 </RelativeLayout>

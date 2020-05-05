@@ -9,7 +9,7 @@
     >
 
     <ImageView
-        android:id="@+id/egg1"
+        android:id="@+id/fullEgg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/full_egg"
