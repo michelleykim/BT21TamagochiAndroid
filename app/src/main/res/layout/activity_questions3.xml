@@ -22,4 +22,37 @@
 
         />
 
+    <Button
+        android:id="@+id/robinHoodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Robin Hood"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/peterPanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/robinHoodButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Peter Pan"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/aliceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/peterPanButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Alice in the wonderland"
+        android:textColor="#000000" />
+
 </RelativeLayout>

@@ -20,22 +20,26 @@ public class Account {
     }
 
     public void determineTendency() {
-        if (tendency == 0) {
+        if (tendency == 5) {
             bt21 = new Koya();
-        } else if (tendency == 7) {
-            bt21 = new Rj();
-        } else if (tendency == 14) {
-            bt21 = new Chimmy();
-        } else if (tendency == 21) {
-            bt21 = new Mang();
-        } else if (tendency == 28) {
-            bt21 = new Shooky();
-        } else if (tendency == 35) {
+        } else if (tendency == 8) {
             bt21 = new Tata();
-        } else if (tendency == 42) {
+        } else if (tendency == 6) {
+            bt21 = new Mang();
+        } else if (tendency == 7) {
+            bt21 = new Chimmy();
+        } else if (tendency == 10) {
             bt21 = new Cooky();
+        } else if (tendency == 9) {
+            bt21 = new Rj();
+        } else if (tendency == 11) {
+            bt21 = new Shooky();
         }
-    } // else if tendency == 2, then new Mang() etc..
+    }
+
+    public void addTendency(int amount) {
+        tendency = tendency + amount;
+    }
 
     public String getName() {
         return name;

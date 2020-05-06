@@ -22,5 +22,37 @@
 
         />
 
+    <Button
+        android:id="@+id/goodNightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Good night"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/sweetDreamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goodNightButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Have a sweet dream"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/tomorrowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sweetDreamButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="See you tomorrow"
+        android:textColor="#000000" />
 
 </RelativeLayout>

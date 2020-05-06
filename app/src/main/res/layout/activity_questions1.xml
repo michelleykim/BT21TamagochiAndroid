@@ -21,4 +21,37 @@
         android:layout_marginTop="150dp"
         />
 
+    <Button
+        android:id="@+id/windowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Beside the window"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/deskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/windowButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="On the desk"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/nightTableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deskButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="On the night table"
+        android:textColor="#000000" />
+
 </RelativeLayout>

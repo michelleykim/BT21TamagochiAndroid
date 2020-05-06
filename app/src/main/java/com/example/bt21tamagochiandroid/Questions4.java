@@ -5,23 +5,53 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.Button;
+
+import com.example.bt21tamagochiandroid.model.Account;
 
 public class Questions4 extends AppCompatActivity {
-    private RelativeLayout rlayout;
+    Account account;
+    Button goodNightButton;
+    Button sweetDreamButton;
+    Button tomorrowButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions4);
 
-        rlayout = (RelativeLayout) findViewById(R.id.questions4);
-        rlayout.setOnClickListener(new View.OnClickListener() {
+        initiateButtons();
+
+    }
+
+    private void initiateButtons() {
+        goodNightButton = (Button) findViewById(R.id.goodNightButton);
+        goodNightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                account.addTendency(1);
                 toCutScene();
             }
         });
+
+        sweetDreamButton = (Button) findViewById(R.id.sweetDreamButton);
+        sweetDreamButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                account.addTendency(2);
+                toCutScene();
+            }
+        });
+
+        tomorrowButton = (Button) findViewById(R.id.tomorrowButton);
+        tomorrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                account.addTendency(3);
+                toCutScene();
+            }
+        });
+
     }
 
     private void toCutScene() {

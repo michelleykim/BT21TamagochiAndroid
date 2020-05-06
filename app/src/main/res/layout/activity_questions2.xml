@@ -22,4 +22,37 @@
 
         />
 
+    <Button
+        android:id="@+id/groovyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Groovy, comforting music"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/trendyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groovyButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Energetic, trendy music"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/hipHopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trendyButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Hip Hop with strong bass"
+        android:textColor="#000000" />
+
 </RelativeLayout>
