@@ -20,6 +20,8 @@ public class Questions4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions4);
 
+        account = Account.getAccount();
+
         initiateButtons();
 
     }

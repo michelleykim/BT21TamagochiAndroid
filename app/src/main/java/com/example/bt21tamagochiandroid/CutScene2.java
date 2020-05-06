@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.example.bt21tamagochiandroid.model.Account;
+
 public class CutScene2 extends AppCompatActivity {
     private RelativeLayout rlayout;
 

@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.bt21tamagochiandroid.model.Account;
+
 public class MainActivity extends AppCompatActivity {
+    private Account account;
     private Button continueButton;
     private Button newGameButton;
     private Button quitButton;
@@ -17,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initiateButtons();
+
+    }
+
+    private void initiateButtons() {
         continueButton = (Button) findViewById(R.id.continueButton);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
     private void quitGame() {
         finish();
         System.exit(0);
+    }
+
+    public Account getAccount() {
+        return account;
     }
 
 }

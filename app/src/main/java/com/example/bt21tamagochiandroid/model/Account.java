@@ -10,17 +10,23 @@ import com.example.bt21tamagochiandroid.model.bt21.Shooky;
 import com.example.bt21tamagochiandroid.model.bt21.Tata;
 
 public class Account {
-    String name;
+    private static Account onlyAccount;
     int tendency;
     Bt21 bt21;
 
-    public Account(String name) {
-        this.name = name;
+    private Account() {
         tendency = 0;
     }
 
+    public static Account getAccount() {
+        if (onlyAccount == null) {
+            onlyAccount = new Account();
+        }
+        return onlyAccount;
+    }
+
     public void determineTendency() {
-        if (tendency == 5) {
+        if (tendency == 4 || tendency == 5) {
             bt21 = new Koya();
         } else if (tendency == 8) {
             bt21 = new Tata();
@@ -32,7 +38,7 @@ public class Account {
             bt21 = new Cooky();
         } else if (tendency == 9) {
             bt21 = new Rj();
-        } else if (tendency == 11) {
+        } else if (tendency == 11 || tendency == 12) {
             bt21 = new Shooky();
         }
     }
@@ -41,9 +47,6 @@ public class Account {
         tendency = tendency + amount;
     }
 
-    public String getName() {
-        return name;
-    }
     public Bt21 getBt21() {return bt21;}
     public int getTendency() {return tendency;}
 

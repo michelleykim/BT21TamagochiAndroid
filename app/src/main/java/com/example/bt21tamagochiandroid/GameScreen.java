@@ -34,7 +34,7 @@ public class GameScreen extends AppCompatActivity {
         pref = getSharedPreferences("BT21_PREF", Context.MODE_PRIVATE);
         editor = pref.edit();
 
-        account = new Account("someAccount");
+        account = Account.getAccount();
         // if account has the tendency in the file, set account tendency to the saved tendency
         if (pref.contains("tendency")) {
             account.setTendency(pref.getInt("tendency", 0));
