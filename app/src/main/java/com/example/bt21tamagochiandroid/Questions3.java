@@ -59,4 +59,9 @@ public class Questions3 extends AppCompatActivity {
         Intent intent = new Intent(this, Questions4.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        // do nothing
+    }
 }

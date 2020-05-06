@@ -61,4 +61,9 @@ public class Questions4 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        // do nothing
+    }
+
 }

@@ -2,7 +2,9 @@ package com.example.bt21tamagochiandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +12,6 @@ import android.widget.Button;
 import com.example.bt21tamagochiandroid.model.Account;
 
 public class MainActivity extends AppCompatActivity {
-    private Account account;
     private Button continueButton;
     private Button newGameButton;
     private Button quitButton;
@@ -26,12 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initiateButtons() {
         continueButton = (Button) findViewById(R.id.continueButton);
-        continueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toGameScreen();
-            }
-        });
+        continueButton.setEnabled(false);
+        SharedPreferences pref = getSharedPreferences("BT21_PREF", Context.MODE_PRIVATE);
+        if (pref.contains("loveAmount")) {
+            continueButton.setEnabled(true);
+            continueButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    toGameScreen();
+                }
+            });
+        }
 
         newGameButton = (Button) findViewById(R.id.newGameButton);
         newGameButton.setOnClickListener(new View.OnClickListener() {
@@ -68,8 +74,5 @@ public class MainActivity extends AppCompatActivity {
         System.exit(0);
     }
 
-    public Account getAccount() {
-        return account;
-    }
 
 }

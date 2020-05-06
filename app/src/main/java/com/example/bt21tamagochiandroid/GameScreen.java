@@ -157,5 +157,9 @@ public class GameScreen extends AppCompatActivity {
         updateSatisfactionsDisplay();
     }
 
+    @Override
+    public void onBackPressed() {
+        // do nothing
+    }
 
 }

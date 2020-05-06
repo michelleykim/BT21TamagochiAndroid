@@ -38,4 +38,9 @@ public class CutScene2 extends AppCompatActivity {
         Intent intent = new Intent(this, GameScreen.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        // do nothing
+    }
 }
