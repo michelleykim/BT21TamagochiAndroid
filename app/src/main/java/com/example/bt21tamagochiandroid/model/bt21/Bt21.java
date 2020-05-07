@@ -12,11 +12,13 @@ public class Bt21 {
     public Bt21() {
         satisfaction = new Satisfaction();
         states = new ArrayList<>();
+        states.add("Happy");
         updateStates();
         name = "BT21";
     }
 
     public void updateStates() {
+        states.clear();
         if (satisfaction.getHunger() > 70
                 || satisfaction.getDirtiness() > 70
                 || satisfaction.getSleepiness() > 70) {

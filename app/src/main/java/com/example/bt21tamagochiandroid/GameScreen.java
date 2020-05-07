@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import com.example.bt21tamagochiandroid.model.Account;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class GameScreen extends AppCompatActivity {
     Account account;
     Button feedButton;
@@ -48,6 +51,28 @@ public class GameScreen extends AppCompatActivity {
 
         updateSatisfactionsDisplay();
         initiateButtons();
+
+        addTimer();
+    }
+
+    private void addTimer() {
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                if (account.getBt21().getStates().contains("Happy")) {
+                    account.getBt21().getSatisfaction().addLove(1);
+                } else {
+                    account.getBt21().getSatisfaction().addLove(-3);
+                }
+                account.getBt21().getSatisfaction().addHunger(-1);
+                account.getBt21().getSatisfaction().addDirtiness(-1);
+                account.getBt21().getSatisfaction().addSleepiness(-1);
+                account.getBt21().updateStates();
+                updateSatisfactionsDisplay();
+            }
+        };
+        timer.schedule(timerTask, 5000, 30000);
     }
 
     private void renderBt21Image() {
