@@ -33,6 +33,7 @@
         android:textSize="15sp"
         android:layout_below="@id/name"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="20sp"
         />
 
     <TextView
@@ -46,6 +47,7 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/name"
         android:layout_toRightOf="@id/love"
+        android:layout_marginBottom="20sp"
         />
 
 
@@ -59,6 +61,7 @@
         android:textSize="15sp"
         android:layout_alignParentLeft="true"
         android:layout_above="@id/dirtiness"
+        android:layout_marginTop="20sp"
         />
 
     <TextView
@@ -71,6 +74,7 @@
         android:textSize="15sp"
         android:layout_above="@id/dirtiness"
         android:layout_toRightOf="@id/hunger"
+        android:layout_marginTop="20sp"
         />
 
     <TextView
@@ -132,6 +136,8 @@
         android:text="@string/feed"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/bathButton"
+        android:layout_marginRight="45dp"
         />
 
     <Button
@@ -141,9 +147,7 @@
         android:text="@string/bath"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="137dp"
-        android:layout_alignLeft="@id/feedButton"
+        android:layout_centerInParent="true"
         />
 
     <Button
@@ -153,16 +157,16 @@
         android:text="@string/sleep"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="137dp"
-        android:layout_alignLeft="@id/bathButton"
+        android:layout_marginLeft="45dp"
+        android:layout_toRightOf="@id/bathButton"
         />
 
     <ImageView
         android:id="@+id/border"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/sleepiness"
-        android:layout_below="@id/name"
+        android:layout_above="@id/hunger"
+        android:layout_below="@id/love"
         app:srcCompat="@drawable/border"
         />
 
@@ -171,8 +175,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baby_koya"
-        android:layout_above="@id/sleepiness"
-        android:layout_below="@id/name"
+        android:layout_above="@id/hunger"
+        android:layout_below="@id/love"
         android:layout_centerHorizontal="true"
         />
 
