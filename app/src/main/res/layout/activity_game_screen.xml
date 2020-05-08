@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingBottom="20dp"
-    android:paddingTop="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="30dp"
+    android:paddingTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameScreen"
@@ -21,6 +21,7 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
         />
 
     <TextView
@@ -112,7 +113,7 @@
         android:textSize="15sp"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_above="@id/feedButton"
         />
 
@@ -124,7 +125,7 @@
         android:text="Someamount"
         android:textColor="#000000"
         android:textSize="15sp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_above="@id/feedButton"
         android:layout_toRightOf="@id/sleepiness"
         />
@@ -137,7 +138,7 @@
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/bathButton"
-        android:layout_marginRight="45dp"
+        android:layout_marginRight="35dp"
         />
 
     <Button
@@ -157,14 +158,14 @@
         android:text="@string/sleep"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="35dp"
         android:layout_toRightOf="@id/bathButton"
         />
 
     <ImageView
         android:id="@+id/border"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@id/hunger"
         android:layout_below="@id/love"
         app:srcCompat="@drawable/border"
@@ -176,8 +177,19 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baby_koya"
         android:layout_above="@id/hunger"
-        android:layout_below="@id/love"
+        android:layout_alignBaseline="@id/border"
+        android:layout_marginBottom="50dp"
         android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/textBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/happy_bubble"
+        android:layout_below="@id/love"
+        android:layout_above="@id/bt21"
+        android:layout_marginTop="50dp"
         />
 
 
