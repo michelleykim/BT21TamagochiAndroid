@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -28,6 +29,7 @@ public class GameScreen extends AppCompatActivity {
     ImageView bt21;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+    final Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class GameScreen extends AppCompatActivity {
         initiateButtons();
 
         addTimer();
+
     }
 
     private void addTimer() {
@@ -63,16 +66,21 @@ public class GameScreen extends AppCompatActivity {
                 if (account.getBt21().getStates().contains("Happy")) {
                     account.getBt21().getSatisfaction().addLove(1);
                 } else {
-                    account.getBt21().getSatisfaction().addLove(-3);
+                    account.getBt21().getSatisfaction().addLove(-4);
                 }
-                account.getBt21().getSatisfaction().addHunger(-1);
-                account.getBt21().getSatisfaction().addDirtiness(-1);
-                account.getBt21().getSatisfaction().addSleepiness(-1);
+                account.getBt21().getSatisfaction().addHunger(2);
+                account.getBt21().getSatisfaction().addDirtiness(2);
+                account.getBt21().getSatisfaction().addSleepiness(2);
                 account.getBt21().updateStates();
-                updateSatisfactionsDisplay();
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        updateSatisfactionsDisplay();
+                    }
+                });
             }
         };
-        timer.schedule(timerTask, 5000, 30000);
+        timer.schedule(timerTask, 5000, 3000);
     }
 
     private void renderBt21Image() {
