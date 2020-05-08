@@ -86,7 +86,7 @@ public class Satisfaction {
         }
     }
     public void addLove(int amount) {
-        if (love < amount && amount < 0) {
+        if (love < 4 && amount < 0) {
             love = 0;
         } else {
             love = love + amount;
