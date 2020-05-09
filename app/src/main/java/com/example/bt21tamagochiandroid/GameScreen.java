@@ -3,6 +3,7 @@ package com.example.bt21tamagochiandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -81,9 +82,40 @@ public class GameScreen extends AppCompatActivity {
                         updateStatesDisplay();
                     }
                 });
+                checkGameOver();
+                checkGameClear();
             }
         };
-        timer.schedule(timerTask1, 4000, 4000);
+        timer.schedule(timerTask1, 3000, 3000);
+    }
+
+    private void checkGameOver() {
+        if (account.getBt21().getSatisfaction().getSleepiness() > 100
+        || account.getBt21().getSatisfaction().getDirtiness() > 100
+        || account.getBt21().getSatisfaction().getHunger() > 100) {
+            gameOver();
+        }
+    }
+
+    private void gameOver() {
+        account.setBt21(null);
+
+        editor.clear();
+        editor.commit();
+
+        Intent intent = new Intent(this, GameOver.class);
+        startActivity(intent);
+    }
+
+    public void checkGameClear() {
+        if (account.getBt21().getSatisfaction().getLove() >= 5) {
+            gameClear();
+        }
+    }
+
+    public void gameClear() {
+        Intent intent = new Intent(this, GameClear.class);
+        startActivity(intent);
     }
 
     private void renderBt21Image() {
