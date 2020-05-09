@@ -71,9 +71,9 @@ public class GameScreen extends AppCompatActivity {
                 } else {
                     account.getBt21().getSatisfaction().addLove(-4);
                 }
-                account.getBt21().getSatisfaction().addHunger(2);
-                account.getBt21().getSatisfaction().addDirtiness(2);
-                account.getBt21().getSatisfaction().addSleepiness(2);
+                account.getBt21().getSatisfaction().addHunger(3);
+                account.getBt21().getSatisfaction().addDirtiness(3);
+                account.getBt21().getSatisfaction().addSleepiness(3);
                 account.getBt21().updateStates();
                 handler.post(new Runnable() {
                     @Override
@@ -108,12 +108,14 @@ public class GameScreen extends AppCompatActivity {
     }
 
     public void checkGameClear() {
-        if (account.getBt21().getSatisfaction().getLove() >= 5) {
+        if (account.getBt21().getSatisfaction().getLove() >= 3) {
             gameClear();
         }
     }
 
     public void gameClear() {
+        account.setBt21(null);
+
         Intent intent = new Intent(this, GameClear.class);
         startActivity(intent);
     }
