@@ -18,7 +18,7 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
 
         />
 
@@ -54,5 +54,13 @@
         android:fontFamily="@font/press_start_2p"
         android:text="@string/quit"
         android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/tile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/tile"
+        android:alpha=".15"
+        />
 
 </RelativeLayout>
