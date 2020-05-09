@@ -183,14 +183,15 @@
         />
 
     <ImageView
-        android:id="@+id/textBubble"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/happy_bubble"
-        android:layout_below="@id/love"
-        android:layout_above="@id/bt21"
-        android:layout_marginTop="50dp"
-        />
+    android:id="@+id/textBubble"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:srcCompat="@drawable/happy"
+    android:layout_below="@id/love"
+    android:layout_above="@id/bt21"
+    android:layout_marginTop="50dp"
+    />
+
 
 
 </RelativeLayout>

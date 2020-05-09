@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.bt21tamagochiandroid.model.Account;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,6 +28,7 @@ public class GameScreen extends AppCompatActivity {
     TextView dirtiness;
     TextView sleepiness;
     ImageView bt21;
+    ImageView textBubble;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     final Handler handler = new Handler();
@@ -60,7 +62,7 @@ public class GameScreen extends AppCompatActivity {
 
     private void addTimer() {
         Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
+        TimerTask timerTask1 = new TimerTask() {
             @Override
             public void run() {
                 if (account.getBt21().getStates().contains("Happy")) {
@@ -76,11 +78,12 @@ public class GameScreen extends AppCompatActivity {
                     @Override
                     public void run() {
                         updateSatisfactionsDisplay();
+                        updateStatesDisplay();
                     }
                 });
             }
         };
-        timer.schedule(timerTask, 5000, 3000);
+        timer.schedule(timerTask1, 4000, 4000);
     }
 
     private void renderBt21Image() {
@@ -147,6 +150,33 @@ public class GameScreen extends AppCompatActivity {
         editor.putInt("sleepinessAmount", sleepinessAmount);
 
         editor.commit();
+    }
+
+    public void updateStatesDisplay() {
+        ArrayList<String> states = account.getBt21().getStates();
+        textBubble = (ImageView) findViewById(R.id.textBubble);
+
+        if (states.size() == 1) {
+            if (states.contains("Happy")) {
+                textBubble.setImageResource(R.drawable.happy);
+            } else if (states.contains("Dirty")) {
+                textBubble.setImageResource(R.drawable.dirty);
+            } else if (states.contains("Sleepy")) {
+                textBubble.setImageResource(R.drawable.sleepy);
+            } else if (states.contains("Hungry")) {
+                textBubble.setImageResource(R.drawable.hungry);
+            }
+        } else if (states.size() == 2) {
+            if (states.contains("Dirty") && states.contains("Sleepy")) {
+                textBubble.setImageResource(R.drawable.sleepy_dirty);
+            } else if (states.contains("Dirty") && states.contains("Hungry")) {
+                textBubble.setImageResource(R.drawable.hungry_dirty);
+            } else if (states.contains("Sleepy") && states.contains("Hungry")) {
+                textBubble.setImageResource(R.drawable.hungry_sleepy);
+            }
+        } else if (states.size() == 3) {
+            textBubble.setImageResource(R.drawable.hungry_sleepy_dirty);
+        }
     }
 
     public void initiateButtons() {

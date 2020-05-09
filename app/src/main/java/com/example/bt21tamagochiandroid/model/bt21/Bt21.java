@@ -19,17 +19,17 @@ public class Bt21 {
 
     public void updateStates() {
         states.clear();
-        if (satisfaction.getHunger() > 70
-                || satisfaction.getDirtiness() > 70
-                || satisfaction.getSleepiness() > 70) {
-            if (satisfaction.getHunger() > 70) {
+        if (satisfaction.getHunger() >= 70
+                || satisfaction.getDirtiness() >= 70
+                || satisfaction.getSleepiness() >= 70) {
+            if (satisfaction.getHunger() >= 70) {
                 states.add("Hungry");
             }
-            if (satisfaction.getDirtiness() > 70) {
+            if (satisfaction.getDirtiness() >= 70) {
                 states.add("Dirty");
             }
-            if (satisfaction.getSleepiness() > 70) {
-                states.add("Dirty");
+            if (satisfaction.getSleepiness() >= 70) {
+                states.add("Sleepy");
             }
         } else {
             states.add("Happy");
