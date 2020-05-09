@@ -32,6 +32,7 @@ public class GameScreen extends AppCompatActivity {
     ImageView textBubble;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+    Timer timer;
     final Handler handler = new Handler();
 
     @Override
@@ -62,7 +63,7 @@ public class GameScreen extends AppCompatActivity {
     }
 
     private void addTimer() {
-        Timer timer = new Timer();
+        timer = new Timer();
         TimerTask timerTask1 = new TimerTask() {
             @Override
             public void run() {
@@ -89,6 +90,14 @@ public class GameScreen extends AppCompatActivity {
         timer.schedule(timerTask1, 3000, 3000);
     }
 
+    public void stoptimertask() {
+        //stop the timer, if it's not already null
+        if (timer != null) {
+            timer.cancel();
+            timer = null;
+        }
+    }
+
     private void checkGameOver() {
         if (account.getBt21().getSatisfaction().getSleepiness() > 100
         || account.getBt21().getSatisfaction().getDirtiness() > 100
@@ -98,23 +107,20 @@ public class GameScreen extends AppCompatActivity {
     }
 
     private void gameOver() {
-        account.setBt21(null);
-
-        editor.clear();
-        editor.commit();
+        stoptimertask();
 
         Intent intent = new Intent(this, GameOver.class);
         startActivity(intent);
     }
 
     public void checkGameClear() {
-        if (account.getBt21().getSatisfaction().getLove() >= 3) {
+        if (account.getBt21().getSatisfaction().getLove() >= 100) {
             gameClear();
         }
     }
 
     public void gameClear() {
-        account.setBt21(null);
+        stoptimertask();
 
         Intent intent = new Intent(this, GameClear.class);
         startActivity(intent);

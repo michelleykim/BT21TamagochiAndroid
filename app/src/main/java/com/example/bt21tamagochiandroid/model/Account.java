@@ -50,6 +50,9 @@ public class Account {
     public Bt21 getBt21() {return bt21;}
     public int getTendency() {return tendency;}
 
+    public void setOnlyAccountNull() {
+        onlyAccount = null;
+    }
     public void setBt21(Bt21 bt21) {
         this.bt21 = bt21;
     }

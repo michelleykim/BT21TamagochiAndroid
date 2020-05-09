@@ -32,7 +32,7 @@ public class Questions4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 account.addTendency(1);
-                toCutScene();
+                toCutScene2();
             }
         });
 
@@ -41,7 +41,7 @@ public class Questions4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 account.addTendency(2);
-                toCutScene();
+                toCutScene2();
             }
         });
 
@@ -50,13 +50,13 @@ public class Questions4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 account.addTendency(3);
-                toCutScene();
+                toCutScene2();
             }
         });
 
     }
 
-    private void toCutScene() {
+    private void toCutScene2() {
         Intent intent = new Intent(this, CutScene2.class);
         startActivity(intent);
     }

@@ -26,14 +26,15 @@ public class CutScene2 extends AppCompatActivity {
                 toGameScreen();
             }
         });
-    }
 
-    private void toGameScreen() {
         // Resets preferences before opening the GameScreen
         SharedPreferences pref = getSharedPreferences("BT21_PREF", Context.MODE_PRIVATE);;
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
         editor.commit();
+    }
+
+    private void toGameScreen() {
 
         Intent intent = new Intent(this, GameScreen.class);
         startActivity(intent);
