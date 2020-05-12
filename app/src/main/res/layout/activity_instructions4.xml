@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instructions4"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="30dp"
+    android:paddingTop="30dp"
+    android:id="@+id/instructions4">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="Baby BT21"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/love"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/love"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20sp"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/loveAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="69/100"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/love"
+        android:layout_marginBottom="20sp"
+        android:alpha=".35"
+        />
+
+
+    <TextView
+        android:id="@+id/hunger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/hunger"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/dirtiness"
+        android:layout_marginTop="20sp"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/hungerAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="72/100"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_above="@id/dirtiness"
+        android:layout_toRightOf="@id/hunger"
+        android:layout_marginTop="20sp"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/dirtiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/dirtiness"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_above="@id/sleepiness"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/dirtinessAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="81/100"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_above="@id/sleepiness"
+        android:layout_toRightOf="@id/dirtiness"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/sleepiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/sleepiness"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/feedButton"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/sleepinessAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="70/100"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/feedButton"
+        android:layout_toRightOf="@id/sleepiness"
+        android:alpha=".35"
+        />
+
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feed"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/bathButton"
+        android:layout_marginRight="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/bathButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bath"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+
+        />
+
+    <Button
+        android:id="@+id/sleepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sleep"
+        android:fontFamily="@font/press_start_2p"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/bathButton"
+
+        />
+
+    <ImageView
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/hunger"
+        android:layout_below="@id/love"
+        app:srcCompat="@drawable/border"
+        android:alpha=".35"
+        />
+
+    <ImageView
+        android:id="@+id/bt21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baby_koya"
+        android:layout_above="@id/hunger"
+        android:layout_alignBaseline="@id/border"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        />
+
+    <ImageView
+        android:id="@+id/textBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hungry_sleepy_dirty"
+        android:layout_below="@id/love"
+        android:layout_above="@id/bt21"
+        android:layout_marginTop="50dp"
+        android:alpha=".35"
+        />
+
+    <TextView
+        android:id="@+id/loveInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/press_start_2p"
+        android:text="\nPressing\n these three buttons\nwill decrease\nthe hunger, dirtiness,\nand sleepiness\nof the baby BT21.\n\nOnce all conditions gets\nbelow 70/100,\nlove will increase.\n\nThat's all for\nthe instructions.\nHave fun!\n"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_marginTop="30dp"
+        android:layout_above="@id/feedButton"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal"
+        android:background="#FF000000"
+        />
+
+</RelativeLayout>

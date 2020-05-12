@@ -23,7 +23,7 @@ public class CutScene2 extends AppCompatActivity {
         rlayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toGameScreen();
+                toInstructions();
             }
         });
 
@@ -34,9 +34,9 @@ public class CutScene2 extends AppCompatActivity {
         editor.commit();
     }
 
-    private void toGameScreen() {
+    private void toInstructions() {
 
-        Intent intent = new Intent(this, GameScreen.class);
+        Intent intent = new Intent(this, Instructions.class);
         startActivity(intent);
     }
 
