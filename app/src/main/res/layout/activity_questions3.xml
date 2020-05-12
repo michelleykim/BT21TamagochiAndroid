@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="30dp"
+    android:paddingTop="30dp"
     tools:context=".Questions3"
     android:id="@+id/questions3"
     >
@@ -14,13 +18,14 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/press_start_2p"
-        android:text="Which book would you \nread to the egg?"
+        android:text="The egg moved \na little \nwhen you played \nthe music! \n \nNow, which book \nwould you \nread to the egg?"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="15sp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
 
-        />
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/robinHoodButton"
@@ -28,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/question3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/press_start_2p"
         android:text="Robin Hood"
         android:textColor="#000000" />
