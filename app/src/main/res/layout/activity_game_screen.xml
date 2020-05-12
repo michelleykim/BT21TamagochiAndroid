@@ -10,6 +10,7 @@
     android:layout_height="match_parent"
     tools:context=".GameScreen"
     android:id="@+id/gameScreen"
+    android:screenOrientation="portrait"
     >
 
     <TextView

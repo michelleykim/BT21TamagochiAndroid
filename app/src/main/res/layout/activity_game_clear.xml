@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".GameClear"
     android:id="@+id/gameClear"
+    android:screenOrientation="portrait"
     >
 
     <ImageView

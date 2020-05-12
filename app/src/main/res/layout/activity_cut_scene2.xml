@@ -10,6 +10,7 @@
     android:paddingTop="30dp"
     tools:context=".CutScene2"
     android:id="@+id/cutScene2"
+    android:screenOrientation="portrait"
     >
 
     <TextView

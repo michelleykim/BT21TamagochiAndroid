@@ -10,6 +10,7 @@
     android:paddingTop="30dp"
     tools:context=".Questions3"
     android:id="@+id/questions3"
+    android:screenOrientation="portrait"
     >
 
     <TextView
