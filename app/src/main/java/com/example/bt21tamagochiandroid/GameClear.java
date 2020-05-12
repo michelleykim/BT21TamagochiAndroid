@@ -75,6 +75,12 @@ public class GameClear extends AppCompatActivity {
                             bt21.setImageResource(R.drawable.koya1);
                         } else if (bt21Name.equals("Chimmy")) {
                             bt21.setImageResource(R.drawable.chimmy1);
+                        } else if (bt21Name.equals("Tata")) {
+                            bt21.setImageResource(R.drawable.tata1);
+                        } else if (bt21Name.equals("Mang")) {
+                            bt21.setImageResource(R.drawable.mang1);
+                        } else if (bt21Name.equals("Shooky")) {
+                            bt21.setImageResource(R.drawable.shooky1);
                         }
                     }
                 });
@@ -94,6 +100,12 @@ public class GameClear extends AppCompatActivity {
                             bt21.setImageResource(R.drawable.koya2);
                         } else if (bt21Name.equals("Chimmy")) {
                             bt21.setImageResource(R.drawable.chimmy2);
+                        } else if (bt21Name.equals("Tata")) {
+                            bt21.setImageResource(R.drawable.tata2);
+                        } else if (bt21Name.equals("Mang")) {
+                            bt21.setImageResource(R.drawable.mang2);
+                        } else if (bt21Name.equals("Shooky")) {
+                            bt21.setImageResource(R.drawable.shooky2);
                         }
                     }
                 });
