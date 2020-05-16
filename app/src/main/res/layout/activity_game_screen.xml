@@ -52,7 +52,6 @@
         android:layout_marginBottom="20sp"
         />
 
-
     <TextView
         android:id="@+id/hunger"
         android:layout_width="wrap_content"
@@ -138,8 +137,7 @@
         android:text="@string/feed"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@id/bathButton"
-        android:layout_marginRight="30dp"
+        android:layout_alignParentLeft="true"
         />
 
     <Button
@@ -159,39 +157,31 @@
         android:text="@string/sleep"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@id/bathButton"
+        android:layout_alignParentRight="true"
         />
 
     <ImageView
         android:id="@+id/border"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/hunger"
         android:layout_below="@id/love"
-        app:srcCompat="@drawable/border"
-        />
+        app:srcCompat="@drawable/border" />
 
     <ImageView
         android:id="@+id/bt21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/baby_koya"
-        android:layout_above="@id/hunger"
-        android:layout_alignBaseline="@id/border"
-        android:layout_marginBottom="40dp"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/baby_koya" />
 
     <ImageView
-    android:id="@+id/textBubble"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:srcCompat="@drawable/happy"
-    android:layout_below="@id/love"
-    android:layout_above="@id/bt21"
-    android:layout_marginTop="50dp"
-    />
+        android:id="@+id/textBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/happy"
+        android:layout_above="@id/bt21"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

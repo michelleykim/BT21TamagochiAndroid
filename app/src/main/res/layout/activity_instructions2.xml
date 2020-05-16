@@ -55,7 +55,6 @@
         android:alpha=".35"
         />
 
-
     <TextView
         android:id="@+id/hunger"
         android:layout_width="wrap_content"
@@ -147,8 +146,7 @@
         android:text="@string/feed"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@id/bathButton"
-        android:layout_marginRight="30dp"
+        android:layout_alignParentLeft="true"
         android:alpha=".35"
         />
 
@@ -170,8 +168,7 @@
         android:text="@string/sleep"
         android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@id/bathButton"
+        android:layout_alignParentRight="true"
         android:alpha=".35"
         />
 
@@ -190,10 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/baby_koya"
-        android:layout_above="@id/hunger"
-        android:layout_alignBaseline="@id/border"
-        android:layout_marginBottom="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:alpha="0"
         />
 
@@ -202,9 +196,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/hungry_sleepy_dirty"
-        android:layout_below="@id/love"
         android:layout_above="@id/bt21"
-        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="1"
         />
 
     <TextView
@@ -212,14 +206,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/press_start_2p"
-        android:text="\nAbove text bubble\nshows you\nthe state of\nbaby BT21.\n\nIf you have\nany of above\nicons showing,\nyour love will\ndecrease.\n"
+        android:text="\n Above text bubble\nshows you\nthe state of\nbaby BT21.\n\nIf you have\nany of above\nicons showing,\nyour love will\ndecrease.\n"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
         android:layout_marginTop="10dp"
         android:layout_below="@id/textBubble"
-        android:layout_marginBottom="20sp"
         android:gravity="center_horizontal"
         android:background="#FF000000"
         />
