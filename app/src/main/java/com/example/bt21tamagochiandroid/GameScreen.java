@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bt21tamagochiandroid.model.Account;
+import com.example.bt21tamagochiandroid.model.MyApplication;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -62,35 +63,49 @@ public class GameScreen extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MyApplication.activityResumed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MyApplication.activityPaused();
+    }
+
     private void addTimer() {
         timer = new Timer();
         TimerTask timerTask1 = new TimerTask() {
             @Override
             public void run() {
-                if (account.getBt21().getStates().contains("Happy")) {
-                    account.getBt21().getSatisfaction().addLove(1);
-                } else {
-                    account.getBt21().getSatisfaction().addLove(-4);
-                }
-                account.getBt21().getSatisfaction().addHunger(3);
-                account.getBt21().getSatisfaction().addDirtiness(3);
-                account.getBt21().getSatisfaction().addSleepiness(3);
-                account.getBt21().updateStates();
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateSatisfactionsDisplay();
-                        updateStatesDisplay();
+                if (MyApplication.isActivityVisible()) {
+                    if (account.getBt21().getStates().contains("Happy")) {
+                        account.getBt21().getSatisfaction().addLove(1);
+                    } else {
+                        account.getBt21().getSatisfaction().addLove(-4);
                     }
-                });
-                checkGameOver();
-                checkGameClear();
+                    account.getBt21().getSatisfaction().addHunger(3);
+                    account.getBt21().getSatisfaction().addDirtiness(3);
+                    account.getBt21().getSatisfaction().addSleepiness(3);
+                    account.getBt21().updateStates();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            updateSatisfactionsDisplay();
+                            updateStatesDisplay();
+                        }
+                    });
+                    checkGameOver();
+                    checkGameClear();
+                }
             }
         };
         timer.schedule(timerTask1, 3000, 3000);
     }
 
-    public void stoptimertask() {
+    public void stopTimerTask() {
         //stop the timer, if it's not already null
         if (timer != null) {
             timer.cancel();
@@ -107,7 +122,7 @@ public class GameScreen extends AppCompatActivity {
     }
 
     private void gameOver() {
-        stoptimertask();
+        stopTimerTask();
 
         Intent intent = new Intent(this, GameOver.class);
         startActivity(intent);
@@ -120,7 +135,7 @@ public class GameScreen extends AppCompatActivity {
     }
 
     public void gameClear() {
-        stoptimertask();
+        stopTimerTask();
 
         Intent intent = new Intent(this, GameClear.class);
         startActivity(intent);
