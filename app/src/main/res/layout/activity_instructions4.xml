@@ -199,6 +199,7 @@
         android:layout_above="@id/bt21"
         android:layout_centerHorizontal="true"
         android:alpha=".15"
+        android:layout_marginBottom="-30dp"
         />
 
     <TextView
