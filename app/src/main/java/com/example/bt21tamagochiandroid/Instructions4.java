@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -22,6 +23,14 @@ public class Instructions4 extends AppCompatActivity {
                 toGameScreen();
             }
         });
+        rlayout.setEnabled(false);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                rlayout.setEnabled(true);
+            }
+        }, 1000);
+
     }
 
     private void toGameScreen() {

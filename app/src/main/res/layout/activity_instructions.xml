@@ -203,16 +203,16 @@
         android:id="@+id/loveInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/press_start_2p"
-        android:text="\nYour goal is\nto increase the love\nto 100\nand successfully\nraise baby BT21.\n\nThe love will increase\nas time passes\nif the baby BT21\nis Happy\nand wil decrease\nif the baby BT21\nis either hungry,\ndirty, or sleepy.\n"
+        android:layout_below="@id/love"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#FF000000"
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="center_horizontal"
+        android:text="\nYour goal is\nto increase the love\nto 100\nand successfully\nraise baby BT21.\n\nThe love will increase\nas time passes\nif the baby BT21\nis Happy\nand wil decrease\nif the baby BT21\nis either hungry,\ndirty, or sleepy.\n"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/love"
-        android:gravity="center_horizontal"
-        android:background="#FF000000"
-        />
+        android:textSize="17sp" />
 
 </RelativeLayout>

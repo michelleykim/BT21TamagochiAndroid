@@ -206,17 +206,17 @@
         android:id="@+id/loveInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/press_start_2p"
-        android:text="\n Above text bubble\nshows you\nthe state of\nbaby BT21.\n\nIf you have\nany of above\nicons showing,\nyour love will\ndecrease.\n"
+        android:layout_below="@id/textBubble"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#FF000000"
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="center_horizontal"
+        android:text="\n Above text bubble\nshows you\nthe state of\nbaby BT21.\n\nIf you have\nany of above\nicons showing,\nyour love will\ndecrease.\n"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/textBubble"
-        android:gravity="center_horizontal"
-        android:background="#FF000000"
-        />
+        android:textSize="17sp" />
 
 
 </RelativeLayout>

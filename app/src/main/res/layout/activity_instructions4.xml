@@ -206,17 +206,17 @@
         android:id="@+id/loveInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/press_start_2p"
-        android:text="\nPressing\n these three buttons\nwill decrease\nthe hunger, dirtiness,\nand sleepiness\nof the baby BT21.\n\nOnce all conditions gets\nbelow 70/100,\nlove will increase.\n\nThat's all for\nthe instructions.\nHave fun!\n"
+        android:layout_above="@id/feedButton"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10sp"
+        android:background="#FF000000"
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="center_horizontal"
+        android:text="\nPressing\n these three buttons\nwill decrease\nthe hunger, dirtiness,\nand sleepiness\nof the baby BT21.\n\nOnce all conditions gets\nbelow 70/100,\nlove will increase.\n\nThat's all for\nthe instructions.\nHave fun!\n"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:layout_marginTop="30dp"
-        android:layout_above="@id/feedButton"
-        android:layout_marginBottom="10sp"
-        android:gravity="center_horizontal"
-        android:background="#FF000000"
-        />
+        android:textSize="17sp" />
 
 </RelativeLayout>

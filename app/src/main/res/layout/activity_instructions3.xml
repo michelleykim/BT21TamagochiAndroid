@@ -207,18 +207,18 @@
         android:id="@+id/loveInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/press_start_2p"
-        android:text="\nBelow three\nshows the hunger,\ndirtiness, and sleepiness\nof baby BT21.\n\nIf each condition\nreaches 70/100,\nthe status\nof baby BT21\nwill change\nand the love\nwill decrease.\n"
+        android:layout_above="@id/hunger"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10sp"
+        android:background="#FF000000"
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:gravity="center_horizontal"
+        android:text="\nBelow three\nshows the hunger,\ndirtiness, and sleepiness\nof baby BT21.\n\nIf each condition\nreaches 70/100,\nthe status\nof baby BT21\nwill change\nand the love\nwill decrease.\n"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:layout_marginTop="30dp"
-        android:layout_above="@id/hunger"
-        android:layout_marginBottom="10sp"
-        android:gravity="center_horizontal"
-        android:background="#FF000000"
-        />
+        android:textSize="17sp" />
 
 
 </RelativeLayout>
