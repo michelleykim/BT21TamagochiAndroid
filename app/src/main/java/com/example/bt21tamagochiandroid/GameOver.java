@@ -22,9 +22,8 @@ public class GameOver extends AppCompatActivity {
 
         pref = getSharedPreferences("BT21_PREF", Context.MODE_PRIVATE);
         editor = pref.edit();
-
         editor.clear();
-        editor.commit();
+        editor.apply();
 
         initiateButtons();
     }
@@ -56,7 +55,14 @@ public class GameOver extends AppCompatActivity {
 
     // EFFECTS: exit application
     private void quitGame() {
-        finish();
-        System.exit(0);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        // do nothing
+    }
+
 }

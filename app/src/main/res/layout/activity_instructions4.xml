@@ -143,34 +143,34 @@
         android:id="@+id/feedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/feed"
-        android:fontFamily="@font/press_start_2p"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:alpha="1"
-        />
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/feed" />
 
     <Button
         android:id="@+id/bathButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bath"
-        android:fontFamily="@font/press_start_2p"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:alpha="1"
-        />
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/bath" />
 
     <Button
         android:id="@+id/sleepButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sleep"
-        android:fontFamily="@font/press_start_2p"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:alpha="1"
-        />
+        android:clickable="false"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/sleep" />
 
     <ImageView
         android:id="@+id/border"

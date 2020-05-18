@@ -181,7 +181,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/happy"
         android:layout_above="@id/bt21"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"/>
 
 
 </RelativeLayout>

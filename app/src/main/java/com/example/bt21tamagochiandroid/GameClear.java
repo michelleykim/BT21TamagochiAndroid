@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.example.bt21tamagochiandroid.model.Account;
 
@@ -20,11 +19,11 @@ import java.util.TimerTask;
 public class GameClear extends AppCompatActivity {
     Account account;
     ImageView bt21;
+    Button toMainButton;
     Timer timer;
     final Handler handler = new Handler();
     SharedPreferences pref;
     SharedPreferences.Editor editor;
-    RelativeLayout rlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +35,8 @@ public class GameClear extends AppCompatActivity {
         pref = getSharedPreferences("BT21_PREF", Context.MODE_PRIVATE);
         editor = pref.edit();
 
-        rlayout = (RelativeLayout) findViewById(R.id.gameClear);
-        rlayout.setOnClickListener(new View.OnClickListener() {
+        toMainButton = (Button) findViewById(R.id.toMainButton);
+        toMainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editor.clear();
@@ -52,7 +51,7 @@ public class GameClear extends AppCompatActivity {
     }
 
     private void toMainActivity() {
-        stoptimertask();
+        stopTimerTask();
         account.setOnlyAccountNull();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -115,7 +114,7 @@ public class GameClear extends AppCompatActivity {
         timer.schedule(timerTask2, 400, 800);
     }
 
-    public void stoptimertask() {
+    public void stopTimerTask() {
         //stop the timer, if it's not already null
         if (timer != null) {
             timer.cancel();

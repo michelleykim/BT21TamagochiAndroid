@@ -70,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
     // EFFECTS: exit application
     private void quitGame() {
-        finish();
-        System.exit(0);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
     }
 
 

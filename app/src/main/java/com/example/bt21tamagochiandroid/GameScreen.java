@@ -239,6 +239,15 @@ public class GameScreen extends AppCompatActivity {
         feedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                feedButton.setEnabled(false);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        feedButton.setEnabled(true);
+                    }
+                }, 500);
+
                 feed();
             }
         });
@@ -247,6 +256,15 @@ public class GameScreen extends AppCompatActivity {
         bathButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bathButton.setEnabled(false);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        bathButton.setEnabled(true);
+                    }
+                }, 500);
+
                 takeBath();
             }
         });
@@ -255,6 +273,15 @@ public class GameScreen extends AppCompatActivity {
         sleepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sleepButton.setEnabled(false);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        sleepButton.setEnabled(true);
+                    }
+                }, 500);
+
                 goSleep();
             }
         });
